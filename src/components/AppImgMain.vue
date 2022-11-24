@@ -32,14 +32,15 @@ export default {
     
     div{
         display: flex;
-        align-items: center;
-        width: calc(100% / 5);   
+        align-items: center;       
     }
     span{
         padding: 10px;
         color: white;
     }
     img{
-        width: 50px;
+        max-width: 50px;
+        max-height: 50px;
+
     }
 </style>
