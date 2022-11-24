@@ -37,16 +37,20 @@ export default {
 
 <style lang="scss" scoped>
 header {
+  padding: 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    .main-nav {
-      
+    img{
+      width: 70px;
+    }
+    .main-nav {  
         ul {
             display: flex;
             list-style: none;
             
             a {
+                font-size: 12px;
                 display: inline-block;
                 padding: 15px 25px;
                 text-decoration: none;
