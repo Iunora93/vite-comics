@@ -10,10 +10,15 @@ export default {
 
 <template>  
   <main>
-    <div class="background-black">
-      <h1 class="container">Content goes here</h1>
+    <div class="hero">
+      
     </div>
-    <div class="main-top">
+    <div class="background-black">
+      <div>
+        <h1 class="container">Content goes here</h1>
+      </div>
+    </div>
+    <div class="main-bottom">
       <section class="container ">
         <AppImgMain/>
       </section>
@@ -22,6 +27,12 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.hero{
+  background-image: url(../assets/jumbotron.jpg);
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .background-black{
   background-color: black;
 }
@@ -30,7 +41,7 @@ export default {
       color: white;
       padding: 30px;
     }
-    .main-top{
+    .main-bottom{
       background-color: #0282f9;
       .container{
         display: flex;
