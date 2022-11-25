@@ -85,22 +85,26 @@ export default {
 
 <template>
 <div class="container">
+
     <button class="btn-series">CURRENT SERIES</button>
+
     <div class="box" v-for="card in cards">
         <img :src="card.thumb" :alt="card.series">
         <h5>{{card.series}}</h5>
     </div>
+
+    <button class="btn-load">LOAD MORE</button>
 </div>
 </template>
 
 <style lang="scss" scoped>
 .container{   
-    padding: 50px 0;
+    padding-top: 50px;
     display: flex;
     flex-wrap: wrap;
     position: relative;
 
-    button{
+    .btn-series{
         position: absolute;
         top: -20px;
         left: 0;
@@ -108,6 +112,15 @@ export default {
         background-color: #0282f9;
         color: white;
         border: none;
+    }
+    .btn-load{
+        background-color: #0282f9;
+        color: white;
+        border: none;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 15px 50px;
     }
     .box{
         width: 170px;
