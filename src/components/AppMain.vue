@@ -1,9 +1,11 @@
 <script>
 import AppImgMain from './AppImgMain.vue';
+import SectionCard from './SectionCard.vue';
 export default {
   name: 'AppMain',
   components:{
-    AppImgMain
+    AppImgMain,
+    SectionCard
   },
 }
 </script>
@@ -13,9 +15,14 @@ export default {
     <div class="hero">
       
     </div>
-    <div class="background-black">
+    <div class="background-color">
       <div>
         <h1 class="container">Content goes here</h1>
+      </div>
+    </div>
+    <div class="background-color">
+      <div class="container">
+        <SectionCard/>
       </div>
     </div>
     <div class="main-bottom">
@@ -33,9 +40,10 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.background-black{
-  background-color: black;
+.background-color{
+  background-color: #1c1c1c;
 }
+
     h1{
       
       color: white;
