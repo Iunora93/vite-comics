@@ -15,13 +15,9 @@ export default {
     <div class="hero">
       
     </div>
+    
     <div class="background-color">
-      <div>
-        <h1 class="container">Content goes here</h1>
-      </div>
-    </div>
-    <div class="background-color">
-      <div class="container">
+      <div class="container">       
         <SectionCard/>
       </div>
     </div>
