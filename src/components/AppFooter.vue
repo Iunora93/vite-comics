@@ -102,7 +102,7 @@ export default {
       list-style: none;
       a{
         text-decoration: none;
-        font-size: 12px;
+        font-size: 13px;
         padding: 15px 25px 0 0;
         color: gray;
       }

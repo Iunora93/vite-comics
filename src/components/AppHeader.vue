@@ -7,21 +7,63 @@ export default {
   },
   data() {
     return {
+        
         links: [
-            'CHARACTERS',
-            'COMICS',
-            'MOVIES',
-            'TV',
-            'GAMES',
-            'COLLECTIBLES',
-            'VIDEOS',
-            'FANS',
-            'NEWS',
-            'SHOP'
+          {
+            text: 'CHARACTERS',
+            active: true,
+          },
+          {
+            text: 'COMICS',
+            active: false,
+          },
+          {
+            text: 'MOVIES',
+            active: false,
+          },
+          {
+            text: 'TV',
+            active: false,
+          },
+          {
+            text: 'GAMES',
+            active: false,
+          },
+          {
+            text: 'COLLECTIBLES',
+            active: false,
+          },
+          {
+            text: 'VIDEOS',
+            active: false,
+          },
+          {
+            text: 'FANS',
+            active: false,
+          },
+          {
+            text: 'NEWS',
+            active: false,
+          },
+          {
+            text: 'SHOP',
+            active: false,
+          },   
         ]
     }
-  }
-}
+  },
+  methods: {
+    changeColor(index){
+      this.links.forEach((elm, i)=>{
+        if(index === i){
+          elm.active=true;
+        }else{
+          elm.active=false;
+        }
+      });
+    },
+  },
+};
 </script>
 
 <template>
@@ -29,7 +71,13 @@ export default {
         <AppLogo/>
         <nav class="main-nav">
             <ul>
-                <li v-for="link in links"><a href="">{{link}}</a></li>
+                <li 
+                  v-for="(link, index) in links" 
+                  :class="{active: link.active}" 
+                  @click="changeColor(index)"
+                >
+                  <a href="#">{{link.text}}</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -48,16 +96,18 @@ header {
         ul {
             display: flex;
             list-style: none;
-            
+            li{
+              &.active {
+                    color: #0282f9;
+                    border-bottom: 3px solid #0282f9;
+                }
+            }
             a {
-                font-size: 12px;
+                font-size: 13px;
                 display: inline-block;
                 padding: 15px 25px;
                 text-decoration: none;
-                color: #000;
-                &.active {
-                    background-color: var(--secondary-color);
-                }
+                color: #000;               
             }
         }
     }
